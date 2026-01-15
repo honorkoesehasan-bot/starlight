@@ -1,0 +1,8 @@
+# robots.txt for Hasan Performance Lab
+# Allow all bots to crawl the site
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://hasan-performnca-lab.netlify.app/sitemap-index.xml
