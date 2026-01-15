@@ -1,0 +1,29 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = 'Impressum der n8n SEO-Übungsseite – Angaben & Kontakt';
+const description = 'Impressum mit Platzhalterdaten für die n8n SEO-Übungsseite. Struktur, Felder und Zuständigkeiten sind für spätere rechtliche Ergänzungen vorbereitet.';
+---
+<BaseLayout title={title} description={description}>
+	<section class="hero">
+		<h1>Impressum</h1>
+		<p>Platzhaltertext für die rechtlichen Angaben dieser Übungsseite.</p>
+	</section>
+
+	<section class="section">
+		<h2>Anbieter</h2>
+		<div class="card">
+			<p>Unternehmen: Musterfirma GmbH</p>
+			<p>Adresse: Beispielstraße 12, 12345 Musterstadt</p>
+			<p>Vertreten durch: Max Mustermann</p>
+			<p>Kontakt: kontakt@example.com</p>
+		</div>
+	</section>
+
+	<section class="section">
+		<h2>Weitere Angaben</h2>
+		<div class="card">
+			<p>Handelsregister, Umsatzsteuer-ID und Aufsichtsbehörde sind hier später einzutragen.</p>
+		</div>
+	</section>
+</BaseLayout>

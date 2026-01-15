@@ -1,0 +1,46 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = 'n8n Automation für Marketing & SEO – Übungsstartseite';
+const description = 'Trainingsseite für n8n Automation im Marketing: klare Workflows, messbare SEO-Signale und praxisnahe Beispiele zum Sammeln echter Daten in der Search Console.';
+---
+<BaseLayout title={title} description={description}>
+	<section class="hero">
+		<h1>n8n Automation für Marketing &amp; SEO</h1>
+		<p>
+			Diese Übungsseite liefert strukturierte Inhalte, damit später echte Signale in der Google Search Console
+			ankommen. Fokus: Automatisierung, messbare Workflows und klare Nutzenkommunikation.
+		</p>
+		<a class="button" href="/blog/">Zum Blog mit Praxisbeispielen</a>
+	</section>
+
+	<section class="section">
+		<h2>Warum diese Seite gut für SEO-Tests ist</h2>
+		<div class="card-grid">
+			<article class="card">
+				<h3>Klare Informationsarchitektur</h3>
+				<p>Startseite, Blog, Kontakt und Rechtliches sind sauber verlinkt, damit Crawler Orientierung finden.</p>
+				<p class="meta">Saubere URL-Struktur und interne Links</p>
+			</article>
+			<article class="card">
+				<h3>Praxisnaher Content</h3>
+				<p>Fünf Artikel behandeln unterschiedliche n8n-Workflows mit eigenen Keywords und FAQs.</p>
+				<p class="meta">800–1200 Wörter pro Artikel</p>
+			</article>
+			<article class="card">
+				<h3>Messbare Experimente</h3>
+				<p>Jeder Beitrag ist auf konkrete Suchintentionen optimiert und verlinkt auf verwandte Themen.</p>
+				<p class="meta">Für echte Daten in der Search Console</p>
+			</article>
+		</div>
+	</section>
+
+	<section class="section">
+		<h2>Nächster Schritt</h2>
+		<p>
+			Starte mit der Übersicht, wähle ein Thema und prüfe später in der Search Console, welche Keywords
+			Traktion bekommen. Wenn etwas fehlt, ist die Kontaktseite der beste Einstiegspunkt.
+		</p>
+		<a class="button" href="/kontakt/">Kontakt aufnehmen</a>
+	</section>
+</BaseLayout>

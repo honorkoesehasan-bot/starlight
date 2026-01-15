@@ -1,0 +1,26 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection, getEntryBySlug } from 'astro:content';
+
+export async function getStaticPaths() {
+	const posts = await getCollection('blog');
+	return posts.map((post) => ({ params: { slug: post.slug } }));
+}
+
+const { slug } = Astro.params;
+const post = await getEntryBySlug('blog', slug);
+if (!post) {
+	throw new Error('Blog post not found');
+}
+
+const { Content } = await post.render();
+const title = post.data.title;
+const description = post.data.description;
+---
+<BaseLayout title={title} description={description} ogType="article">
+	<article class="blog-content">
+		<p class="meta">Veröffentlicht: {post.data.pubDate} · Fokus: {post.data.mainKeyword}</p>
+		<h1>{post.data.title}</h1>
+		<Content />
+	</article>
+</BaseLayout>

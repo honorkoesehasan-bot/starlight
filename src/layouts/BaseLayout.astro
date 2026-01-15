@@ -1,0 +1,75 @@
+---
+const {
+	title,
+	description,
+	ogTitle = title,
+	ogDescription = description,
+	ogType = 'website',
+} = Astro.props;
+
+const canonical = Astro.url?.toString?.() ?? '';
+const ogImage = '/og-placeholder.svg';
+---
+<!doctype html>
+<html lang="de">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>{title}</title>
+		<meta name="description" content={description} />
+		<link rel="canonical" href={canonical} />
+		<link rel="sitemap" href="/sitemap.xml" />
+
+		<meta property="og:title" content={ogTitle} />
+		<meta property="og:description" content={ogDescription} />
+		<meta property="og:type" content={ogType} />
+		<meta property="og:url" content={canonical} />
+		<meta property="og:image" content={ogImage} />
+
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content={ogTitle} />
+		<meta name="twitter:description" content={ogDescription} />
+		<meta name="twitter:image" content={ogImage} />
+
+		<link rel="stylesheet" href="/styles/global.css" />
+	</head>
+	<body>
+		<a class="skip-link" href="#main">Zum Inhalt springen</a>
+		<header class="site-header">
+			<div class="container">
+				<a class="logo" href="/">n8n SEO-Lab</a>
+				<nav class="nav">
+					<a href="/">Start</a>
+					<a href="/blog/">Blog</a>
+					<a href="/kontakt/">Kontakt</a>
+					<a href="/impressum/">Impressum</a>
+					<a href="/datenschutz/">Datenschutz</a>
+				</nav>
+			</div>
+		</header>
+		<main id="main" class="main">
+			<div class="container">
+				<slot />
+			</div>
+		</main>
+		<footer class="site-footer">
+			<div class="container footer-grid">
+				<div>
+					<strong>n8n SEO-Lab</strong>
+					<p class="muted">Übungsseite für strukturiertes SEO-Content-Monitoring.</p>
+				</div>
+				<div>
+					<p class="muted">Schnellzugriff</p>
+					<a href="/blog/">Blog-Übersicht</a>
+					<a href="/sitemap.xml">Sitemap</a>
+					<a href="/robots.txt">robots.txt</a>
+				</div>
+				<div>
+					<p class="muted">Rechtliches</p>
+					<a href="/impressum/">Impressum</a>
+					<a href="/datenschutz/">Datenschutz</a>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
