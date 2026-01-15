@@ -13,10 +13,9 @@ export default defineConfig({
         src: './src/assets/logo.svg',
         replacesTitle: false,
       },
-      social: {
-        linkedin: 'https://www.linkedin.com/in/hasan-k%C3%B6se-955485251/',
-        instagram: 'https://www.instagram.com/hasan.marketing/',
-      },
+      social: [        linkedin: 'https://www.linkedin.com/in/hasan-k%C3%B6se-955485251/',
+                { icon: 'instagram', link: 'https://www.instagram.com/hasan.marketing/' },
+      ],
       customCss: [
         './src/styles/custom.css',
       ],
